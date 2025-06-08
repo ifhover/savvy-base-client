@@ -1,0 +1,36 @@
+.el-table {
+  --table-cell-px: 12px;
+  --el-table-header-bg-color: var(--slate-50);
+  --text-color: var(--stone-800);
+  &.align-top {
+    .el-table__cell {
+      vertical-align: top;
+    }
+  }
+  .el-table__inner-wrapper {
+    &::before {
+      content: none;
+    }
+  }
+  .el-table__header {
+    .el-table__cell {
+      padding: 16px 0;
+      .cell {
+        color: var(--text-color);
+        font-weight: 600;
+        font-size: 14px;
+        padding: 0 var(--table-cell-px);
+      }
+    }
+  }
+  .el-table__body {
+    .el-table__cell {
+      padding: 16px 0;
+      .cell {
+        color: var(--text-color);
+        font-size: 14px;
+        padding: 0 var(--table-cell-px);
+      }
+    }
+  }
+}
