@@ -1,8 +1,11 @@
 import 'vue-router'
 
-interface Promise<T> {
-  withLoading(loading: Ref<boolean>): Promise<T>
+declare global {
+  interface Promise<T> {
+    withLoading(loading: Ref<boolean>): Promise<T>
+  }
 }
+
 
 declare module 'vue-router' {
   interface RouteMeta {
@@ -10,3 +13,5 @@ declare module 'vue-router' {
     guards?: string[]
   }
 }
+
+export {}
